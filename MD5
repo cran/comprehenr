@@ -1,0 +1,15 @@
+1f668f7d219bdf41640900d2d6d84ba9 *DESCRIPTION
+9eae4f81cc661a48f639adcab6d45eb3 *NAMESPACE
+ae9744a18a3e8381f52f6cc7a1f739b0 *NEWS
+9d068354dad09e34d136622c47d93df3 *R/numerate.R
+2cd274aa082603356616443aaced1cd3 *R/to_list.R
+4c2b51c442c40ec2a3fdcb52b9629fa5 *build/vignette.rds
+c509ec17151723e1508a8302b676769c *inst/doc/Introduction.R
+8c0b3a2d2e11eb7099d2331469f88612 *inst/doc/Introduction.html
+8f52e4da5a36911fa7eff6e3d353d1ee *inst/doc/Introduction.rmd
+895a3d2fb9364a5bf9e792ebf0eb86eb *man/numerate.Rd
+1a46aa120583704085db04f03d710781 *man/to_list.Rd
+84d4c1df4cdde63ca21c93b2ab41a510 *tests/testthat.R
+e8442fed05eccf37936fc5ed902654f7 *tests/testthat/test_numerate.R
+2eea9d874f9488c6c9fe90ba97844eb6 *tests/testthat/test_to_list.R
+8f52e4da5a36911fa7eff6e3d353d1ee *vignettes/Introduction.rmd
