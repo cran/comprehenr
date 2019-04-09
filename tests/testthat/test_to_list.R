@@ -36,18 +36,18 @@ expect_equal(
 )
 expect_false(exists(".___res"))
 expect_false(exists(".___counter"))
-expect_false(exists(".__curr"))
+expect_false(exists(".___curr"))
 
 expect_error(to_list(for(i in 1:10) i*brrrr))
 expect_false(exists(".___res"))
 expect_false(exists(".___counter"))
-expect_false(exists(".__curr"))
+expect_false(exists(".___curr"))
 
 
 expect_error(to_list(1))
 expect_false(exists(".___res"))
 expect_false(exists(".___counter"))
-expect_false(exists(".__curr"))
+expect_false(exists(".___curr"))
 a = 11
 expect_error(to_list(a + 2))
 
@@ -117,3 +117,22 @@ index = seq_along(letters)
 true_res = expand.grid(paste(seq_along(letters), LETTERS), paste(index[index %% 2==0], letters[index %% 2==0]))
 true_res = paste(true_res[[2]], true_res[[1]])
 expect_identical(res, true_res)
+
+
+context("alter")
+data(iris)
+iris2 = alter(for(i in iris) if(is.numeric(i)) scale(i))
+res_iris = iris
+res_iris[,-5] = lapply(iris[,-5], scale)
+expect_equal(iris2, res_iris)
+
+iris2 = alter(for(`name, value` in mark(iris)) if(endsWith(name, "Width")) scale(value), data = iris)
+
+res_iris = iris
+res_iris[,c("Sepal.Width", "Petal.Width")] = lapply(iris[,c("Sepal.Width", "Petal.Width")], scale)
+expect_equal(iris2, res_iris)
+
+expect_error(alter(1))
+# library(data.table)
+# dt_iris = as.data.table(iris)
+# dt_iris2 = alter(for(i in dt_iris) if(is.numeric(i)) scale(i))
