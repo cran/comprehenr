@@ -1,7 +1,7 @@
 Package: comprehenr
 Type: Package
 Title: List Comprehensions
-Version: 0.6.6
+Version: 0.6.7
 Maintainer: Gregory Demin <gdemin@gmail.com>
 Authors@R: person("Gregory", "Demin", email = "gdemin@gmail.com",
          role = c("aut", "cre"))
@@ -19,7 +19,7 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2019-06-07 01:00:05 UTC; gregory
+Packaged: 2019-06-16 20:53:44 UTC; gregory
 Author: Gregory Demin [aut, cre]
 Repository: CRAN
-Date/Publication: 2019-06-07 04:20:03 UTC
+Date/Publication: 2019-06-17 08:00:08 UTC
